@@ -1,0 +1,10 @@
+export { default as CollectionTable } from "./Collection";
+export { default as NFTTable } from "./NFT";
+export { default as ProjectTable } from "./Project";
+export { default as StructureTable } from "./Structure";
+export { default as PermissionTable } from "./Permission";
+export { default as WalletTable } from "./Wallet";
+export { default as WalletDetailTable } from "./Wallet/DetailTable";
+export { default as NewsExternalTable } from "./News/External/NewsTable";
+export { default as NewsInternalTable } from "./News/Internal/NewsTable";
+export { default as RatingTable } from "./Rating/RatingTable";

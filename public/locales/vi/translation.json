@@ -1,0 +1,559 @@
+{
+  "LoginPage": {
+    "title": "Đăng nhập",
+    "title-qr": "Đăng nhập bằng quét mã QR",
+    "btn": {
+      "notHaveAccount": "Chưa có tài khoản?",
+      "forgetPassword": "Quên mật khẩu?",
+      "getCodeQr": "Nhận mã QR"
+    },
+    "step-login-qr": {
+      "step1": "Mở ứng dụng NFT trên thiết bị di động",
+      "step2": {
+        "selectIcon": "Chọn biểu tượng",
+        "atHomePage": "ở Trang chủ"
+      },
+      "step3": "Quét mã QR bên để Đăng nhập"
+    }
+  },
+  "ConfirmOtpPage": {
+    "title": "Xác nhận OTP",
+    "noReceiveCode": "Không nhận được mã?",
+    "infor": "Vui lòng nhập mã xác thực được gửi đến số điện thoại"
+  },
+  "ForgetPasswordPage": {
+    "title": "Quên mật khẩu",
+    "infor": "Vui lòng nhập số điện thoại đã Đăng ký tài khoản với"
+  },
+  "SignUpPage": {
+    "title": "Đăng ký"
+  },
+  "ResetPasswordPage": {
+    "title": "Thiết lập mật khẩu"
+  },
+  "Navbar": {
+    "account": "Tài khoản",
+    "language": "Ngôn ngữ",
+    "auth": "Cài đặt xác thực",
+    "darkMode": "Chủ đề",
+    "investment": "Danh mục đầu tư",
+    "interests": "Danh mục quan tâm",
+    "logout": "Đăng xuất",
+    "login": "Đăng nhập",
+    "search": "Tìm kiếm"
+  },
+  "Sidebar": {
+    "overview": "Tổng quan",
+    "permission": "Phân quyền",
+    "product": "Sản phẩm",
+    "project": "Dự án",
+    "collection": "Bộ sưu tập",
+    "nft": "NFT",
+    "investor": "Nhà đầu tư",
+    "merchant": "Nhà phát hành",
+    "wallet": "Quản lý ví tiền",
+    "news": "Tin tức & Sự kiện",
+    "report": "Báo cáo",
+    "setting": "Cài đặt",
+    "announce": "Thông báo",
+    "cost": "Quản lý chi phí"
+  },
+  "AccountPage": {
+    "tab": {
+      "info": "Thông tin cá nhân",
+      "wallet": "Quản lý ví",
+      "investment": "Danh mục đầu tư",
+      "interests": "Danh mục quan tâm"
+    },
+    "form": {
+      "name": "Họ và tên",
+      "birthday": "Ngày sinh",
+      "email": "Email",
+      "phone": "Số điện thoại",
+      "identify": "CMND/CCCD",
+      "address": "Địa chỉ",
+      "sex": "Giới tính",
+      "job": "Nghề nghiệp",
+      "like": "Quan tâm",
+      "role": "Vị trí",
+      "department": "Phòng ban",
+      "password": "Mật khẩu",
+      "changePassword": "Thay đổi mật khẩu"
+    },
+    "popupEdit": {
+      "title": "Thay đổi thông tin",
+      "name": "Biệt danh"
+    },
+    "popupChangePassword": {
+      "currentPassword": "Mật khẩu hiện tại",
+      "newPassword": "Mật khẩu mới",
+      "confirmPassword": "Xác nhận lại mật khẩu"
+    },
+    "edit": "Chỉnh sửa"
+  },
+  "LocaleSwitcher": {
+    "locale": "{locale, select, vi {Tiếng việt} en {Tiếng anh} other {Không biết}}"
+  },
+  "HomePage": {
+    "statistics": "Thống kê",
+    "investor": "Tổng số nhà đầu tư",
+    "increase": "so với tháng trước",
+    "project": "Tổng dự án niêm yết",
+    "nft": "Tổng NFT phát hành",
+    "transaction": "Tổng số giao dịch",
+    "favorite": "Top NFT yêu thích"
+  },
+  "PermissionPage": {
+    "listUser": "Danh sách tài khoản",
+    "investor": "Nhà đầu tư",
+    "merchant": "Nhà phát hành",
+    "admin": "Sàn giao dịch",
+    "table": {
+      "accountId": "ID tài khoản",
+      "userName": "Tên đăng nhập",
+      "phoneNumber": "Số điện thoại",
+      "fullName": "Họ và tên",
+      "companyName": "Tên công ty",
+      "role": "Nhóm quyền",
+      "status": "Trạng thái",
+      "createdAt": "Ngày tạo",
+      "action": "Thao tác"
+    },
+    "createUser": {
+      "title": "Thêm mới tài khoản",
+      "sendToPhone": "Gửi mật khẩu tài khoản đến số điện thoại",
+      "sendToEmail": "Gửi mật khẩu tài khoản đến email",
+      "createPassword": "Thiết lập mật khẩu thủ công",
+      "companyName": "Tên công ty",
+      "phoneNumber": "Số điện thoại",
+      "password": "Mật khẩu",
+      "confirmPassword": "Xác nhận lại mật khẩu"
+    },
+    "updateInfo": {
+      "title": "Cập nhật thông tin tài khoản",
+      "sendPassword": "Gửi mật khẩu tài khoản đến số điện thoại",
+      "createPassword": "Thiết lập mật khẩu thủ công",
+      "companyName": "Tên công ty",
+      "phoneNumber": "Số điện thoại",
+      "password": "Mật khẩu",
+      "confirmPassword": "Xác nhận lại mật khẩu"
+    },
+    "deleteUser": {
+      "title": "Xóa tài khoản",
+      "description": "Bạn muốn xóa tài khoản?"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "permission": "Phân quyền",
+      "listUser": "Danh sách tài khoản"
+    }
+  },
+  "ProjectPage": {
+    "title": "Danh sách dự án",
+    "all": "Tất cả",
+    "pending": "Chờ duyệt",
+    "process": "Niêm yết",
+    "cancel": "Hủy niêm yết",
+    "table": {
+      "projectId": "Mã dự án",
+      "name": "Tên dự án",
+      "merchant": "Đơn vị phát hành",
+      "floors": "Số tầng",
+      "apartments": "Số căn",
+      "category": "Danh mục",
+      "collection": "Bộ sưu tập",
+      "status": "Trạng thái",
+      "action": "Thao tác"
+    },
+    "tab": {
+      "info": "Thông tin",
+      "collections": "Bộ sưu tập"
+    },
+    "delete": {
+      "title": "Xóa tài khoản",
+      "description": "Bạn muốn xóa tài khoản?"
+    },
+    "create": {
+      "title": "Thông tin chung",
+      "form": {
+        "name": "Tên dự án",
+        "status": "Trạng thái",
+        "thumbnail": "Hình ảnh dự án",
+        "merchant": "Nhà phát hành",
+        "description": "Giới thiệu",
+        "category": "Danh mục",
+        "address": "Địa chỉ",
+        "utilities": "Tiện ích",
+        "floors": "Số tầng",
+        "area": "Số phân khu",
+        "block": "Số block",
+        "apartments": "Số căn",
+        "link": "Link website",
+        "file": "Hồ sơ đính kèm",
+        "fileStructure": "Cấu trúc tài sản"
+      },
+      "project": "Bộ sưu tập",
+      "createProject": "Thêm dự án"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "product": "Sản phẩm",
+      "project": "Dự án",
+      "listProject": "Danh sách dự án",
+      "createProject": "Thêm dự án",
+      "updateProject": "Cập nhật dự án"
+    }
+  },
+  "CollectionPage": {
+    "title": "Danh sách Bộ sưu tập",
+    "all": "Tất cả",
+    "merchantReview": "Chờ merchant duyệt",
+    "pending": "Chờ Admin duyệt",
+    "process": "Niêm yết",
+    "cancel": "Hủy niêm yết",
+    "draft": "Bản nháp",
+    "request": "Yêu cầu niêm yết",
+    "seeAll": "Xem tất cả",
+    "table": {
+      "avartar": "Ảnh đại diện",
+      "thumbnail": "Ảnh bìa",
+      "name": "Tên bộ sưu tập",
+      "project": "Tên dự án",
+      "description": "Mô tả",
+      "quantity": "Số lượng NFT",
+      "price": "Giá phát hành",
+      "total": "Tổng giá trị",
+      "date": "Ngày phát hành",
+      "status": "Trạng thái",
+      "action": "Thao tác"
+    },
+    "deleteUser": {
+      "title": "Xóa tài khoản",
+      "description": "Bạn muốn xóa tài khoản?"
+    },
+    "create": {
+      "title": "Bộ sưu tập",
+      "form": {
+        "name": "Tên bộ sưu tập",
+        "apartment": "Căn hộ",
+        "thumbnail": "Ảnh bìa",
+        "avartar": "Ảnh đại diện",
+        "project": "Dự án",
+        "description": "Giới thiệu",
+        "quantity": "Số lượng NFT",
+        "floor": "Tầng",
+        "area": "Phân khu",
+        "block": "Tòa",
+        "price": "Giá phát hành",
+        "date": "Ngày phát hành",
+        "status": "Trạng thái"
+      }
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "product": "Sản phẩm",
+      "collection": "Bộ sưu tập",
+      "listCollection": "Danh sách bộ sưu tập",
+      "createCollection": "Thêm bộ sưu tập",
+      "updateCollection": "Cập nhật bộ sưu tập"
+    }
+  },
+  "NFTPage": {
+    "title": "Danh sách NFT",
+    "all": "Tất cả",
+    "merchantReview": "Chờ merchant duyệt",
+    "pending": "Chờ Admin duyệt",
+    "minted": "Đã đúc",
+    "process": "Niêm yết",
+    "cancel": "Hủy niêm yết",
+    "draft": "Bản nháp",
+    "request": "Yêu cầu niêm yết",
+    "table": {
+      "id": "Mã NFT",
+      "thumbnail": "Ảnh bìa",
+      "name": "Tên NFT",
+      "collection": "Tên bộ sưu tập",
+      "project": "Tên dự án",
+      "onwer": "Người sở hữu",
+      "price": "Giá bán",
+      "publicPrice": "Giá phát bán",
+      "date": "Ngày phát hành",
+      "status": "Trạng thái",
+      "action": "Thao tác"
+    },
+    "detail": {
+      "title": "Chi tiết NFT",
+      "info": "Thông tin chung"
+    },
+    "deleteUser": {
+      "title": "Xóa tài khoản",
+      "description": "Bạn muốn xóa tài khoản?"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "product": "Sản phẩm",
+      "nft": "NFT",
+      "listNFT": "Danh sách NFT",
+      "createNFT": "Thêm NFT",
+      "updateNFT": "Cập nhật NFT"
+    },
+    "updatePrice": "Cập nhật giá"
+  },
+  "WalletPage": {
+    "title": "Danh sách ví khách hàng",
+    "table": {
+      "id": "Mã ví",
+      "owner": "Tên người sở hữu",
+      "platform": "Đối tượng",
+      "investor": "Nhà đầu tư",
+      "merchant": "Nhà phát hành",
+      "createdAt": "Ngày tạo",
+      "status": "Trạng thái"
+    },
+    "filter": {
+      "all": "Tất cả",
+      "investor": "Nhà đầu tư",
+      "merchant": "Nhà phát hành",
+      "active": "Đang hoạt động",
+      "inactive": "Ngừng hoạt động",
+      "date": "Thời gian tạo"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "wallet": "Quản lý ví tiền",
+      "listWallet": "Danh sách ví khách hàng"
+    }
+  },
+  "WalletDetailPage": {
+    "title": "Thông tin ví",
+    "id": "Mã ví",
+    "owner": "Tên người sở hữu",
+    "platform": "Đối tượng",
+    "investor": "Nhà đầu tư",
+    "merchant": "Nhà phát hành",
+    "createdAt": "Ngày tạo",
+    "status": "Trạng thái",
+    "active": "Đang hoạt động",
+    "inactive": "Ngừng hoạt động",
+    "otherTransaction": "Giao dịch khác",
+    "table": {
+      "title": "Lịch sử biến động",
+      "id": "Mã giao dịch",
+      "type": "Loại giao dịch",
+      "createdAt": "Ngày tạo",
+      "from": "Từ",
+      "to": "Đến",
+      "total": "Tổng biến động",
+      "fee": "Phí giao dịch",
+      "description": "Mô tả",
+      "project": "Dự án",
+      "collection": "Bộ sưu tập",
+      "totalNft": "Tổng NFTs"
+    },
+    "filter": {
+      "all": "Tất cả",
+      "investor": "Nhà đầu tư",
+      "merchant": "Nhà phát hành",
+      "active": "Đang hoạt động",
+      "inactive": "Ngừng hoạt động",
+      "date": "Thời gian tạo"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "wallet": "Quản lý ví tiền",
+      "walletDetail": "Chi tiết ví"
+    }
+  },
+  "NewsPage": {
+    "title": "Danh sách tin tức",
+    "create": "Tạo bài viết",
+    "table": {
+      "id": "ID",
+      "thumbnail": "Ảnh bìa",
+      "title": "Tiêu đề",
+      "description": "Mô tả",
+      "status": "Trạng thái",
+      "createdAt": "Ngày tạo",
+      "action": "Chức năng"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "news": "Danh sách tin tức",
+      "internal": "Nội bộ",
+      "external": "Gắn link"
+    },
+    "filter": {
+      "status": "Trạng thái",
+      "active": "Hiển thị",
+      "inactive": "Ẩn"
+    },
+    "modalDelete": {
+      "title": "Xóa tin tức",
+      "description": "Bạn muốn xóa tin tức?"
+    }
+  },
+  "NewsCreatePage": {
+    "title": "Tạo tin tức",
+    "form": {
+      "title": "Tiêu đề",
+      "description": "Mô tả",
+      "content": "Nội dung",
+      "tag": "Tag",
+      "thumbnail": "Ảnh bìa",
+      "link": "Link bài viết",
+      "status": "Trạng thái"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "news": "Danh sách tin tức",
+      "internal": "Nội bộ",
+      "external": "Gắn link",
+      "create": "Tạo tin tức"
+    }
+  },
+  "NewsEditPage": {
+    "title": "Chỉnh sửa tin tức",
+    "form": {
+      "title": "Tiêu đề",
+      "description": "Mô tả",
+      "content": "Nội dung",
+      "tag": "Tag",
+      "thumbnail": "Ảnh bìa",
+      "link": "Link bài viết",
+      "status": "Trạng thái"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "news": "Danh sách tin tức",
+      "edit": "Chỉnh sửa tin tức",
+      "internal": "Nội bộ",
+      "external": "Gắn link"
+    }
+  },
+  "RatingPage": {
+    "title": "Danh sách đánh giá",
+    "table": {
+      "id": "Mã đánh giá",
+      "content": "Nội dung",
+      "rating": "Đánh giá",
+      "user": "Người dùng",
+      "merchant": "Nhà phát hành",
+      "nft": "NFT",
+      "unit": "Căn hộ",
+      "createdAt": "Ngày tạo"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "ratings": "Danh sách đánh giá"
+    },
+    "filter": {
+      "date": "Thời gian tạo"
+    }
+  },
+  "RatingDetailPage": {
+    "title": "Chi tiết đánh giá",
+    "form": {
+      "id": "Mã đánh giá",
+      "content": "Nội dung",
+      "rating": "Đánh giá",
+      "user": "Người dùng",
+      "merchant": "Nhà phát hành",
+      "nft": "NFT",
+      "unit": "Căn hộ",
+      "createdAt": "Ngày tạo"
+    },
+    "breadcrumb": {
+      "home": "Trang chủ",
+      "ratings": "Danh sách đánh giá",
+      "rating": "Đánh giá"
+    }
+  },
+  "Error": {
+    "notFoundUser": "Tài khoản không tồn tại",
+    "foundUser": "Tài khoản đã tồn tại",
+    "fields": "đầy đủ trường",
+    "invalidEmail": "Nhập không đúng định dạng email",
+    "inputField": "Vui lòng nhập {name}",
+    "founded": "Đã tồn tại",
+    "TRY_AGAIN": "Có lỗi, vui lòng thử lại",
+    "USER_DISABLED": "Tài khoản đã bị khóa",
+    "USER_OR_PASSWORD_INCORRECT": "User name hoặc mật khẩu sai",
+    "CONFIRM_PASSWORD_INCORRECT": "Mật khẩu xác nhận không đúng",
+    "PROJECT_HAVE_BEEN_DISABLE": "Dự án đang bị hủy niêm yết, không thực hiện được",
+    "REFRESH_TOKEN_EXPIRED": "Hết phiên đăng nhập",
+    "HAVE_SOME_OWNED_NFTs": "Có người đang sở hữu NFTs",
+    "UNIT_IS_EXISTED": "Đơn vị đã tồn tại",
+    "COLLECTION_IS_EXISTED": "Bộ sưu tập đã tồn tại",
+    "COLLECTION_NAME_IS_EXISTED": "Tên bộ sưu tập đã tồn tại",
+    "CANNOT_DISABLE_THIS_PROJECT": "Không thể hủy niêm yết dự án",
+    "COLLECTION_IS_NOT_IN_MERCHANT_REVIEW_STATUS": "Bộ sưu tập không ở trạng thái chờ merchant duyệt",
+    "NOT_FOUND_COLLECTION": "Không tìm thấy bộ sưu tập",
+    "LINK_IS_INVALID": "Link không hợp lệ"
+  },
+  "Success": {
+    "ok": "Cập nhật thành công",
+    "create": "Tạo thành công",
+    "delete": "Xóa thành công"
+  },
+  "Common": {
+    "goBack": "Trở về",
+    "confirm": "Xác nhận",
+    "save": "Lưu",
+    "edit": "Chỉnh sửa",
+    "cancelEdit": "Hủy chỉnh sửa",
+    "field": {
+      "phone": "Số điện thoại",
+      "password": "Mật khẩu",
+      "rePassword": "Nhập lại mật khẩu"
+    },
+    "placeholder": {
+      "password": "Nhập mật khẩu",
+      "search": "Tìm kiếm..."
+    },
+    "delete": "Xóa",
+    "create": "Thêm mới {name}",
+    "update": "Đang cập nhật",
+    "success": "Thành công",
+    "notYet": "Chưa có dữ liệu",
+    "exportExcel": "Xuất Excel",
+    "copied": "Đã copy",
+    "transaction": {
+      "all": "Tất cả",
+      "buy": "Mua",
+      "sell": "Bán",
+      "deposit": "Nạp tiền",
+      "withdraw": "Rút tiền",
+      "title": "Giao dịch {name}",
+      "free": "Miễn phí"
+    },
+    "pagination": {
+      "page": "Trang"
+    }
+  },
+  "Filter": {
+    "day": "Ngày",
+    "week": "Tuần",
+    "month": "Tháng",
+    "year": "Năm",
+    "selectYear": "Lựa chọn năm",
+    "selectMonth": "Lựa chọn tháng",
+    "selectWeek": "Lựa chọn tuần",
+    "selectDate": "Lựa chọn ngày",
+    "title": "Bộ lọc",
+    "cancel": "Hủy bộ lọc",
+    "newest": "Mới nhất",
+    "oldest": "Cũ nhất"
+  },
+  "Transaction": {
+    "quantity": "Số lượng",
+    "value": "Giá trị",
+    "success": "Thành công",
+    "failed": "Thất bại",
+    "pending": "Đang xử lý",
+    "cancel": "Hủy"
+  },
+  "favoriteNFT": {
+    "name": "Tên dịch vụ",
+    "quantity": "Số lượng"
+  }
+}

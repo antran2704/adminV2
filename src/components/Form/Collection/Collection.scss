@@ -1,0 +1,7 @@
+@import "~/styles/global.scss";
+
+.ant-modal-wrap {
+  padding: 20px 0;
+
+  @include scroll();
+}

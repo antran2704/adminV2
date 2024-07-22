@@ -1,0 +1,19 @@
+# Ignore message folder
+message
+
+# Ignore markdown file
+*.md
+
+# Ignore all files in the node_modules directory
+node_modules
+
+#Ignore all files in the build directory
+build
+dist
+
+# Ignore package-lock.json package.json
+package-lock.json
+package.json
+
+#Ignore .prettierrc file
+.prettierrc

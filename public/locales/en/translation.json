@@ -1,0 +1,553 @@
+{
+    "LoginPage": {
+      "title": "Login",
+      "title-qr": "Login by scanning the QR code",
+      "btn": {
+        "notHaveAccount": "Don't have an account?",
+        "forgetPassword": "Forget password?",
+        "getCodeQr": "Get QR Code"
+      },
+      "step-login-qr": {
+        "step1": "Open the NFT app on your mobile device",
+        "step2": {
+          "selectIcon": "Select the",
+          "atHomePage": "icon on the Home page"
+        },
+        "step3": "Scan the side QR code to Login"
+      }
+    },
+    "ConfirmOtpPage": {
+      "title": "Confirm OTP",
+      "noReceiveCode": "No receive code?",
+      "infor": "Please enter the verification code sent to the phone number"
+    },
+    "ForgetPasswordPage": {
+      "title": "Forget Password",
+      "infor": "Please enter the phone number you registered your account with"
+    },
+    "SignUpPage": {
+      "title": "Sign Up"
+    },
+    "ResetPasswordPage": {
+      "title": "Set up password"
+    },
+    "Navbar": {
+      "account": "Account",
+      "language": "Language",
+      "auth": "Authen",
+      "darkMode": "Dark mode",
+      "investment": "Investment portfolio",
+      "interests": "Interests",
+      "logout": "Logout",
+      "login": "Login",
+      "search": "Search"
+    },
+    "Sidebar": {
+      "overview": "Overview",
+      "permission": "Permission",
+      "product": "Product",
+      "project": "Project",
+      "collection": "Collection",
+      "nft": "NFT",
+      "investor": "Investor",
+      "merchant": "Merchant",
+      "wallet": "Wallet",
+      "news": "News & Event",
+      "report": "Report",
+      "setting": "Setting",
+      "announce": "Announce",
+      "cost": "Cost Management"
+    },
+    "AccountPage": {
+      "tab": {
+        "info": "Information",
+        "wallet": "Wallet",
+        "investment": "Investment portfolio",
+        "interests": "Interests"
+      },
+      "form": {
+        "name": "Name",
+        "birthday": "Birthday",
+        "identify": "Identify",
+        "address": "Address",
+        "email": "Email",
+        "phone": "Phone",
+        "sex": "Sex",
+        "job": "Job",
+        "like": "Like",
+        "role": "Role",
+        "department": "Department",
+        "password": "Password",
+        "changePassword": "Change password"
+      },
+      "popupEdit": {
+        "title": "Change information",
+        "name": "User name"
+      },
+      "popupChangePassword": {
+        "currentPassword": "Password",
+        "newPassword": "New password",
+        "confirmPassword": "Confirm password"
+      },
+      "edit": "Edit"
+    },
+    "HomePage": {
+      "statistics": "Statistics",
+      "investor": "Investors",
+      "project": "Project",
+      "nft": "Total NFT",
+      "transaction": "Transactions",
+      "favorite": "Top favorite NFT",
+      "increase": "compared to last month"
+    },
+    "PermissionPage": {
+      "listUser": "List User",
+      "investor": "Investor",
+      "merchant": "Merchant",
+      "admin": "Admin",
+      "table": {
+        "accountId": "ID Account",
+        "userName": "User Name",
+        "fullName": "Full Name",
+        "companyName": "Company Name",
+        "phoneNumber": "Phone Number",
+        "role": "Role",
+        "status": "Status",
+        "createdAt": "Created At",
+        "action": "Action"
+      },
+      "createUser": {
+        "title": "Create new user",
+        "sendToPhone": "Send password to user's phone number",
+        "sendToEmail": "Send password to user's email",
+        "createPassword": "Create password",
+        "companyName": "Company Name",
+        "phoneNumber": "Phone Number",
+        "password": "Password",
+        "confirmPassword": "Confirm password"
+      },
+      "updateInfo": {
+        "title": "Update info user",
+        "sendPassword": "Send password to user's phone number",
+        "createPassword": "Create password",
+        "companyName": "Company Name",
+        "phoneNumber": "Phone Number",
+        "password": "Password",
+        "confirmPassword": "Confirm password"
+      },
+      "deleteUser": {
+        "title": "Delete user",
+        "description": "Do you want delete user?"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "permission": "Permission",
+        "listUser": "List User"
+      }
+    },
+    "ProjectPage": {
+      "title": "List of project",
+      "all": "All",
+      "pending": "Pending",
+      "process": "In Process",
+      "cancel": "Cancel",
+      "table": {
+        "projectId": "Project ID",
+        "name": "Name",
+        "merchant": "Merchant",
+        "floors": "Floors",
+        "apartments": "Apartments",
+        "category": "Category",
+        "collection": "Collections",
+        "status": "Status",
+        "action": "Action"
+      },
+      "tab": {
+        "info": "Information",
+        "collections": "Collections"
+      },
+      "delete": {
+        "title": "Delete user",
+        "description": "Do you want delete user?"
+      },
+      "create": {
+        "title": "Information",
+        "form": {
+          "name": "Name",
+          "status": "Status",
+          "thumbnail": "Thumbnail",
+          "merchant": "Merchant",
+          "description": "Description",
+          "category": "Category",
+          "address": "Address",
+          "utilities": "Utilities",
+          "floors": "Floors",
+          "apartments": "Apartments",
+          "area": "Area",
+          "block": "Block",
+          "link": "Link website",
+          "file": "File",
+          "fileStructure": "Structure file"
+        },
+        "project": "Projects",
+        "createProject": "Create Project"
+      },
+      "breadcrumb": {
+        "home": "Hone",
+        "product": "Product",
+        "project": "Project",
+        "listProject": "List Project",
+        "createProject": "Create Project",
+        "updateProject": "Update Project"
+      }
+    },
+    "CollectionPage": {
+      "title": "List of collection",
+      "all": "All",
+      "merchantReview": "Merchant review",
+      "pending": "Admin review",
+      "process": "Listed",
+      "cancel": "Unlisted",
+      "draft": "Draft",
+      "request": "Require list",
+      "seeAll": "See all",
+      "table": {
+        "avartar": "Avartar",
+        "thumbnail": "Thumbnail",
+        "name": "Name",
+        "project": "Project Name",
+        "description": "Description",
+        "quantity": "Quantity of NFT",
+        "price": "Price",
+        "total": "Total",
+        "date": "CreatedAt",
+        "status": "Status",
+        "action": "Action"
+      },
+      "deleteUser": {
+        "title": "Delete user",
+        "description": "Do you want delete user?"
+      },
+      "create": {
+        "title": "Collection",
+        "form": {
+          "name": "Name",
+          "status": "Status",
+          "thumbnail": "Thumbnail",
+          "avartar": "Avartar",
+          "apartment": "Apartment",
+          "project": "Project",
+          "description": "Description",
+          "quantity": "Quantity of NFT",
+          "floor": "Floor",
+          "area": "Area",
+          "block": "Block",
+          "price": "Price",
+          "date": "Public date"
+        }
+      },
+      "breadcrumb": {
+        "home": "Hone",
+        "product": "Product",
+        "collection": "Collection",
+        "listCollection": "List Collection",
+        "createCollection": "Create Collection",
+        "updateCollection": "Update Collection"
+      }
+    },
+    "NFTPage": {
+      "title": "List of NFT",
+      "all": "All",
+      "merchantReview": "Merchant review",
+      "pending": "Admin review",
+      "minted": "Minted",
+      "process": "Listed",
+      "cancel": "Unlisted",
+      "draft": "Draft",
+      "table": {
+        "id": "ID NFT",
+        "thumbnail": "Thumbnail",
+        "name": "Name",
+        "collection": "Collection Name",
+        "project": "Project Name",
+        "onwer": "Owner",
+        "price": "Price",
+        "publicPrice": "Public Price",
+        "date": "CreatedAt",
+        "status": "Status",
+        "action": "Action"
+      },
+      "deleteUser": {
+        "title": "Delete user",
+        "description": "Do you want delete user?"
+      },
+      "breadcrumb": {
+        "home": "Hone",
+        "product": "Product",
+        "nft": "NFT",
+        "listNFT": "List NFT",
+        "createNFT": "Create NFT",
+        "updateNFT": "Update NFT"
+      },
+      "updatePrice": "Update price"
+    },
+    "WalletPage": {
+      "title": "List wallet of user",
+      "table": {
+        "id": "ID Wallet",
+        "owner": "Owner Name",
+        "platform": "Platform",
+        "investor": "Investor",
+        "merchant": "Merchant",
+        "createdAt": "Created At",
+        "status": "Status"
+      },
+      "filter": {
+        "all": "All",
+        "investor": "Investor",
+        "merchant": "Merchant",
+        "active": "Active",
+        "inactive": "Inactive",
+        "date": "Date"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "wallet": "Wallet Management",
+        "listWallet": "List Wallet"
+      }
+    },
+    "WalletDetailPage": {
+      "title": "Infor of wallet",
+      "id": "ID Wallet",
+      "owner": "Owner Name",
+      "platform": "Platform",
+      "investor": "Investor",
+      "merchant": "Merchant",
+      "createdAt": "Created At",
+      "status": "Status",
+      "otherTransaction": "Other transaction",
+      "table": {
+        "title": "History of transaction",
+        "id": "ID",
+        "type": "Type",
+        "createdAt": "Created at",
+        "from": "From",
+        "to": "To",
+        "total": "Total",
+        "fee": "Fee",
+        "description": "Description",
+        "project": "Project",
+        "collection": "Collection",
+        "totalNft": "Total NFTs"
+      },
+      "filter": {
+        "all": "All",
+        "investor": "Investor",
+        "merchant": "Merchant",
+        "active": "Active",
+        "inactive": "Inactive",
+        "date": "Created At"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "wallet": "Wallet Management",
+        "walletDetail": "Wallet Detail"
+      }
+    },
+    "NewsPage": {
+      "title": "List news",
+      "create": "Create news",
+      "table": {
+        "id": "ID",
+        "thumbnail": "Thumbnail",
+        "title": "Title",
+        "description": "Description",
+        "status": "Status",
+        "createdAt": "Created At",
+        "action": "Action"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "news": "List news",
+        "internal": "Internal",
+        "external": "External"
+      },
+      "filter": {
+        "status": "Status",
+        "active": "Active",
+        "inactive": "Inactive"
+      },
+      "modalDelete": {
+        "title": "Delete news",
+        "description": "Do you want delete news?"
+      }
+    },
+    "NewsCreatePage": {
+      "title": "Create news",
+      "form": {
+        "title": "Title",
+        "description": "Description",
+        "content": "Content",
+        "thumbnail": "Thumbnail",
+        "tag": "Tag",
+        "link": "Link",
+        "status": "Status"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "news": "List news",
+        "create": "Create news",
+        "internal": "Internal",
+        "external": "External"
+      }
+    },
+    "NewsEditPage": {
+      "title": "Edit news",
+      "form": {
+        "title": "Title",
+        "description": "Description",
+        "content": "Content",
+        "thumbnail": "Thumbnail",
+        "tag": "Tag",
+        "link": "Link",
+        "status": "Status"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "news": "List news",
+        "edit": "Edit news",
+        "internal": "Internal",
+        "external": "External"
+      }
+    },
+    "RatingPage": {
+      "title": "List rating",
+      "table": {
+        "id": "ID Rating",
+        "content": "Content",
+        "rating": "Rate",
+        "user": "User",
+        "merchant": "Merchant",
+        "nft": "NFT",
+        "unit": "Unit",
+        "createdAt": "Created At"
+      },
+      "filter": {
+        "date": "Created At"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "ratings": "Ratings"
+      }
+    },
+    "RatingDetailPage": {
+      "title": "Detail rating",
+      "form": {
+        "id": "ID Rating",
+        "content": "Content",
+        "rating": "Rate",
+        "user": "User",
+        "merchant": "Merchant",
+        "nft": "NFT",
+        "unit": "Unit",
+        "createdAt": "Created At"
+      },
+      "breadcrumb": {
+        "home": "Home",
+        "ratings": "Ratings",
+        "rating": "Detail Rating"
+      }
+    },
+    "LocaleSwitcher": {
+      "locale": "{locale, select, vi {Vietnamese} en {English} other {Unknown}}"
+    },
+    "Error": {
+      "notFoundUser": "User isn't exit",
+      "foundUser": "User is exit",
+      "fields": "fields",
+      "invalidEmail": "Please input valid email",
+      "inputField": "Please input {name}",
+      "TRY_AGAIN": "Please try again",
+      "founded": "Already Exited",
+      "USER_DISABLED": "User is banned",
+      "USER_OR_PASSWORD_INCORRECT": "User or password incorrect",
+      "CONFIRM_PASSWORD_INCORRECT": "Confirm password incorrect",
+      "PROJECT_HAVE_BEEN_DISABLE": "Project have been disable",
+      "REFRESH_TOKEN_EXPIRED": "Login session expired",
+      "HAVE_SOME_OWNED_NFTs": "Someone already owned NFTs",
+      "UNIT_IS_EXISTED": "Unit is existed",
+      "COLLECTION_IS_EXISTED": "Collection is existed",
+      "COLLECTION_NAME_IS_EXISTED": "Collection name is existed",
+      "CANNOT_DISABLE_THIS_PROJECT": "Cannot disable this project",
+      "COLLECTION_IS_NOT_IN_MERCHANT_REVIEW_STATUS": "Collection is not in merchant review status",
+      "NOT_FOUND_COLLECTION": "Not found collection",
+      "LINK_IS_INVALID": "Link is invalid"
+    },
+    "Success": {
+      "ok": "Update success",
+      "create": "Create success",
+      "delete": "Delete success"
+    },
+    "Common": {
+      "goBack": "Back",
+      "confirm": "Confirm",
+      "save": "Save",
+      "edit": "Edit",
+      "cancelEdit": "Cancel edit",
+      "field": {
+        "phone": "Phone",
+        "password": "Password",
+        "rePassword": "Confirm password"
+      },
+      "placeholder": {
+        "password": "Enter password",
+        "search": "Search..."
+      },
+      "delete": "Delete",
+      "create": "Create {name}",
+      "update": "updating",
+      "notYet": "Not yet",
+      "success": "Success",
+      "exportExcel": "Export Excel",
+      "copied": "Copied",
+      "transaction": {
+        "all": "All",
+        "buy": "Buy",
+        "sell": "Sell",
+        "deposit": "Deposit",
+        "withdraw": "Withdraw",
+        "title": "Transaction {name}",
+        "free": "Free"
+      },
+      "pagination": {
+        "page": "Page"
+      }
+    },
+    "Filter": {
+      "day": "Day",
+      "week": "Week",
+      "month": "Month",
+      "year": "Year",
+      "selectYear": "Select year",
+      "selectMonth": "Select month",
+      "selectWeek": "Select week",
+      "selectDate": "Select date",
+      "title": "Filter",
+      "cancel": "Remove filter",
+      "newest": "Newest",
+      "oldest": "Oldest"
+    },
+    "Transaction": {
+      "quantity": "Quantity",
+      "value": "Value",
+      "success": "Success",
+      "failed": "Failed",
+      "pending": "Pending",
+      "cancel": "Cancel"
+    },
+    "favoriteNFT": {
+      "name": "Name",
+      "quantity": "Quantity"
+    }
+  }
+  
