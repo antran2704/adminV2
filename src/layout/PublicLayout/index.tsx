@@ -1,7 +1,7 @@
-import LocaleSwitcher from "~/components/LocaleSwitcher";
 import { ReactNode, useEffect } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { getAuthToken } from "~/helper/auth";
+import LocaleSwitcher from "~/components/LocaleSwitcher";
 import { useAppDispatch, useAppSelector } from "~/store/hooks";
 import { fetchUser } from "~/store/slice/user";
 

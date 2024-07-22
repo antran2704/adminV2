@@ -1,12 +1,11 @@
 import { Row, Card, Statistic } from "antd";
 import React from "react";
-import Project from "@/icons/order-icon.svg";
-import Image from "next/image";
-import DiscIcon from "@/icons/disc-icon.svg";
-import SalesIcon from "@/icons/sales-icon.svg";
+import Project from "@assets/icons/order-icon.svg";
+import DiscIcon from "@assets/icons/disc-icon.svg";
+import SalesIcon from "@assets/icons/sales-icon.svg";
 import clsx from "clsx";
 import SelectTypeDate from "../Select/SelectTypeDate";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 interface IFormatterStatic {
   icon: React.ReactNode;
@@ -17,11 +16,11 @@ interface IFormatterStatic {
 }
 
 const Statistical = () => {
-  const t = useTranslations("HomePage");
+  const { t } = useTranslation("HomePage");
 
   const valueStatical = [
     {
-      icon: <Image src={Project} alt="project" />,
+      icon: <img src={Project} alt="project" />,
       iconColor: "bg-[#FF6D00]",
       value: 300,
       description: t("investor"),
@@ -29,7 +28,7 @@ const Statistical = () => {
       color: "!bg-[#FF6D00]/20",
     },
     {
-      icon: <Image src={Project} alt="project" />,
+      icon: <img src={Project} alt="project" />,
       iconColor: "bg-green-500",
       value: 300,
       description: t("project"),
@@ -37,7 +36,7 @@ const Statistical = () => {
       color: "!bg-green-600",
     },
     {
-      icon: <Image src={DiscIcon} alt="project" />,
+      icon: <img src={DiscIcon} alt="project" />,
       iconColor: "bg-primary-600",
       value: 500000,
       description: t("nft"),
@@ -45,7 +44,7 @@ const Statistical = () => {
       color: "!bg-primary-800",
     },
     {
-      icon: <Image src={SalesIcon} alt="project" />,
+      icon: <img src={SalesIcon} alt="project" />,
       iconColor: "bg-orange-500",
       value: 80000,
       description: t("transaction"),

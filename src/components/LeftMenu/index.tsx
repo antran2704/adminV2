@@ -17,19 +17,20 @@ import { MdOutlineAttachMoney, MdOutlineSettings } from "react-icons/md";
 import { FaBoxArchive } from "react-icons/fa6";
 import { FaBell } from "react-icons/fa";
 
-import { usePathname, useRouter } from "~/navigation";
 import useWindowDimensions from "~/hooks/useWindowDimensions";
 
 import "./SideBar.scss";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
+import { useLocation, useNavigate } from "react-router-dom";
 
 type MenuItem = Required<MenuProps>["items"][number];
 
 const LeftMenu = () => {
-  const t = useTranslations("Sidebar");
+  const { t } = useTranslation("Sidebar");
 
-  const router = useRouter();
-  const pathname = usePathname();
+  const navigate = useNavigate();
+  const { pathname } = useLocation();
+
   const [collapsed, setCollapsed] = useState<boolean>(true);
   const { width } = useWindowDimensions();
 
@@ -42,7 +43,7 @@ const LeftMenu = () => {
       toggleCollapsed();
     }
 
-    router.push(path);
+    navigate(path);
   };
 
   const items: MenuItem[] = useMemo(() => {

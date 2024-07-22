@@ -9,8 +9,9 @@ import jwt, { JwtPayload } from "jsonwebtoken";
 import { INTERNAL_PATH } from "./constants";
 import { message } from "antd";
 import MESSAGE_ERROR from "~/commons/error";
+import { NavigateFunction } from "react-router-dom";
 
-let router: any;
+let navigate: NavigateFunction;
 let isRefreshToken: boolean = false;
 let tError: any;
 let dispatch: AppDispatch;
@@ -19,9 +20,8 @@ export const injectStore = (_dispatch: AppDispatch) => {
   dispatch = _dispatch;
 };
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export const injectRouter = (_router: any) => {
-  router = _router;
+export const injectNavigate = (_navigate: NavigateFunction) => {
+  navigate = _navigate;
 };
 
 export const injectTranslate = (_tError: any) => {
@@ -75,7 +75,7 @@ AxiosClient.interceptors.request.use(
       if (!decoded) {
         removeAuthToken();
         dispatch(logoutUser());
-        router.push("/");
+        navigate("/");
 
         controller.abort();
         return {
@@ -125,7 +125,7 @@ AxiosClient.interceptors.request.use(
     if ((!accessToken || !refreshToken) && !SKIP_URL.includes(url)) {
       removeAuthToken();
       dispatch(logoutUser());
-      router.push("/login");
+      navigate("/login");
 
       controller.abort();
 
@@ -163,7 +163,7 @@ AxiosClient.interceptors.response.use(
       isRefreshToken = false;
       removeAuthToken();
       dispatch(logoutUser());
-      router.push("/login");
+      navigate("/login");
     }
 
     if (

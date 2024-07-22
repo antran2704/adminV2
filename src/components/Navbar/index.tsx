@@ -1,6 +1,3 @@
-"use client";
-
-import { useParams } from "next/navigation";
 import { Fragment, useEffect, useMemo, useState } from "react";
 import clsx from "clsx";
 
@@ -27,17 +24,18 @@ import {
 } from "react-icons/md";
 import { LuPencilRuler } from "react-icons/lu";
 
-import { Link, usePathname, useRouter } from "~/navigation";
 import { useAppDispatch, useAppSelector } from "~/store/hooks";
 import { handleChangeMode } from "~/helper/darkmode";
 
 // style navbar
 import "./Navbar.scss";
-import { useTranslations } from "next-intl";
+
 import { getAuthToken, removeAuthToken } from "~/helper/auth";
 import { logout } from "~/api-client/auth";
-import { NO_IMAGE } from "~/commons/image";
+import { LOGO, NO_IMAGE } from "~/commons/image";
 import { logoutUser } from "~/store/slice/user";
+import { useTranslation } from "react-i18next";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 interface INavbarMobile {
   key: string;
@@ -51,13 +49,12 @@ interface INavbarMobile {
 let timmerNavbarMobile: NodeJS.Timeout;
 
 const Navbar = () => {
-  const router = useRouter();
-  const params = useParams();
-  const pathname = usePathname();
-  const t = useTranslations("Navbar");
-  const tError = useTranslations("Error");
+  // const pathname = usePathname();
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
+  const { t, i18n } = useTranslation("Navbar");
+  const { t: tError } = useTranslation("Error");
 
-  const { darkMode } = useAppSelector((state) => state.setting);
   const { infoUser } = useAppSelector((state) => state.user);
   const dispatch = useAppDispatch();
 
@@ -66,6 +63,9 @@ const Navbar = () => {
   const [showDropdown, setShowDropdown] = useState<boolean>(false);
   const [showLanguage, setShowLanguage] = useState<boolean>(false);
   const [showNavbarMobile, setShowNavbarMobile] = useState<boolean>(false);
+  const [darkMode, setDarkMode] = useState<boolean>(
+    localStorage.getItem("theme") === "dark" ? true : false,
+  );
 
   const onClickItemMobile = (item: INavbarMobile) => {
     if (item.children && item.children.length) {
@@ -73,19 +73,20 @@ const Navbar = () => {
       return;
     }
     if (item.key.includes("language") && item.path) {
-      router.replace(pathname, { locale: item.locale });
+      i18n.changeLanguage(item.locale);
+      // router.replace(pathname, { locale: item.locale });
       onShowNavbarMobile();
       return;
     }
 
     if (item.path && item.locale) {
-      router.replace(item.path, { locale: item.locale });
+      navigate(item.path);
       onShowNavbarMobile();
       return;
     }
 
     if (item.path) {
-      router.replace(item.path as string);
+      navigate(item.path as string);
       onShowNavbarMobile();
     }
   };
@@ -144,13 +145,11 @@ const Navbar = () => {
         key: "/account",
         label: (
           <Link
-            href="/account"
+            to="/account"
             className="min-w-[240px] flex items-center px-4 py-1 gap-2"
           >
-            <FaRegUser className="w-6 min-w-6 h-6 dark:text-white" />
-            <p className="text-base font-semibold capitalize dark:text-white">
-              {t("account")}
-            </p>
+            <FaRegUser className="w-6 min-w-6 h-6 " />
+            <p className="text-base font-semibold capitalize">{t("account")}</p>
           </Link>
         ),
       },
@@ -168,7 +167,7 @@ const Navbar = () => {
               </p>
             </div>
             <div className="flex items-center">
-              <span className="text-sm">{params.locale}</span>
+              <span className="text-sm">{i18n.resolvedLanguage}</span>
               <MdOutlineKeyboardArrowRight className="w-6 min-w-6 h-6" />
             </div>
           </div>
@@ -178,8 +177,8 @@ const Navbar = () => {
         key: "authen",
         label: (
           <Link
-            href="/"
-            className="min-w-[240px] flex items-center dark:text-white px-4 py-1 gap-2"
+            to="/"
+            className="min-w-[240px] flex items-center  px-4 py-1 gap-2"
           >
             <MdOutlineRemoveRedEye className="w-6 min-w-6 h-6" />
             <p className="text-base font-semibold capitalize">{t("auth")}</p>
@@ -190,8 +189,8 @@ const Navbar = () => {
         key: "4",
         label: (
           <Link
-            href="/"
-            className="min-w-[240px] flex items-center dark:text-white px-4 py-1 gap-2"
+            to="/"
+            className="min-w-[240px] flex items-center  px-4 py-1 gap-2"
           >
             <FaRegHandshake className="w-6 min-w-6 h-6" />
             <p className="text-base font-semibold capitalize">
@@ -204,8 +203,8 @@ const Navbar = () => {
         key: "5",
         label: (
           <Link
-            href="/"
-            className="min-w-[240px] flex items-center dark:text-white px-4 py-1 gap-2"
+            to="/"
+            className="min-w-[240px] flex items-center  px-4 py-1 gap-2"
           >
             <LuPencilRuler className="w-6 min-w-6 h-6" />
             <p className="text-base font-semibold capitalize">
@@ -227,7 +226,10 @@ const Navbar = () => {
             <Switch
               checked={darkMode}
               defaultChecked={darkMode}
-              onClick={() => handleChangeMode(darkMode, dispatch)}
+              onClick={() => {
+                setDarkMode(!darkMode);
+                handleChangeMode();
+              }}
             />
           </div>
         ),
@@ -240,15 +242,15 @@ const Navbar = () => {
         label: infoUser._id ? (
           <button
             onClick={onLogout}
-            className="min-w-[240px] flex items-center dark:text-white px-4 py-1 gap-2"
+            className="min-w-[240px] flex items-center  px-4 py-1 gap-2"
           >
             <MdLogout className="w-6 min-w-6 h-6" />
             <p className="text-base font-semibold capitalize">{t("logout")}</p>
           </button>
         ) : (
           <Link
-            href="/login"
-            className="min-w-[240px] flex items-center dark:text-white px-4 py-1 gap-2"
+            to="/login"
+            className="min-w-[240px] flex items-center  px-4 py-1 gap-2"
           >
             <MdLogout className="w-6 min-w-6 h-6" />
             <p className="text-base font-semibold capitalize">{t("login")}</p>
@@ -256,7 +258,7 @@ const Navbar = () => {
         ),
       },
     ];
-  }, [darkMode, infoUser]);
+  }, [darkMode, infoUser, i18n.resolvedLanguage]);
 
   const itemsLanguage: MenuProps["items"] = useMemo(() => {
     return [
@@ -275,25 +277,23 @@ const Navbar = () => {
       {
         key: "en",
         label: (
-          <Link
-            href={pathname}
-            locale="en"
-            className="min-w-[240px] flex items-center px-4 py-1 gap-2"
+          <button
+            onClick={() => i18n.changeLanguage("en")}
+            className="min-w-[240px] flex items-center px-4 py-1 text-base font-semibold capitalize gap-2"
           >
-            <p className="text-base font-semibold capitalize">English</p>
-          </Link>
+            English
+          </button>
         ),
       },
       {
         key: "vi",
         label: (
-          <Link
-            href={pathname}
-            locale="vi"
-            className="min-w-[240px] flex items-center px-4 py-1 gap-2"
+          <button
+            onClick={() => i18n.changeLanguage("vi")}
+            className="min-w-[240px] flex items-center px-4 py-1 text-base font-semibold capitalize gap-2"
           >
-            <p className="text-base font-semibold capitalize">Vietnamese</p>
-          </Link>
+            Tiếng Việt
+          </button>
         ),
       },
     ];
@@ -380,17 +380,8 @@ const Navbar = () => {
     >
       <nav className="container__cus flex items-center justify-between py-2">
         <div className="lg:w-3/12 w-fit flex items-center h-[60px]">
-          <Link href={"/"} className="flex items-center justify-center gap-2">
-            <img
-              src="https://opensea.io/static/images/logos/opensea-logo.svg"
-              alt="logo"
-              className="min-w-[40px] w-[40px] h-full"
-            />
-            <img
-              src="/main/NFT_Trade.png"
-              alt="logo"
-              className="xl:block hidden min-w-[100px] w-[100px] h-full"
-            />
+          <Link to={"/"} className="flex items-center justify-center gap-2">
+            <img src={LOGO} alt="logo" className="size-32 h-full" />
           </Link>
           <span className="xl:block hidden shrink-0 bg-[#fff3] h-1/2 min-w-[1px] w-[1px] ml-4"></span>
         </div>
@@ -407,7 +398,7 @@ const Navbar = () => {
             <div className="md:hidden block">
               {!infoUser.imageProfile && <Avatar icon={<FaUserAlt />} />}
               {infoUser.imageProfile && (
-                <Link href={"/account"}>
+                <Link to={"/account"}>
                   <img
                     onError={(e) => (e.currentTarget.src = NO_IMAGE)}
                     src={infoUser.imageProfile.url}
@@ -446,7 +437,7 @@ const Navbar = () => {
               >
                 {!infoUser.imageProfile && <Avatar icon={<FaUserAlt />} />}
                 {infoUser.imageProfile && (
-                  <Link href={"/account"}>
+                  <Link to={"/account"}>
                     <img
                       onError={(e) => (e.currentTarget.src = NO_IMAGE)}
                       src={infoUser.imageProfile.url}
@@ -463,7 +454,7 @@ const Navbar = () => {
               menu={{
                 items: itemsLanguage,
                 selectable: true,
-                selectedKeys: [params.locale as string],
+                selectedKeys: [i18n.resolvedLanguage as string],
                 onClick: (info: ItemType): void => {
                   if (info.key === "back") {
                     onShowLanguage();
@@ -518,7 +509,8 @@ const Navbar = () => {
                     className={clsx(
                       "flex items-center justify-between w-full p-5 cursor-pointer  gap-2",
                       [
-                        pathname === item.key || params.locale === item.locale
+                        pathname === item.key ||
+                        i18n.resolvedLanguage === item.locale
                           ? "bg-[#1677ff] text-white"
                           : "hover:bg-gray-200 dark:hover:bg-[#ffffff0a] dark:text-white",
                       ],
@@ -551,7 +543,10 @@ const Navbar = () => {
                   <Switch
                     checked={darkMode}
                     defaultChecked={darkMode}
-                    onClick={() => handleChangeMode(darkMode, dispatch)}
+                    onClick={() => {
+                      setDarkMode(!darkMode);
+                      handleChangeMode();
+                    }}
                   />
                 </li>
                 {infoUser._id && (
@@ -573,7 +568,7 @@ const Navbar = () => {
                 {!infoUser._id && (
                   <li>
                     <Link
-                      href={"/login"}
+                      to={"/login"}
                       className="flex items-center w-full p-5 cursor-pointer hover:bg-gray-200 dark:hover:bg-[#ffffff0a] dark:text-white border-t-2 dark:border-t-neutral-400 gap-2"
                     >
                       <MdLogout className="w-6 min-w-6 h-6" />

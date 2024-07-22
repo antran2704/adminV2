@@ -23,7 +23,6 @@ const LoginPage = () => {
   const { t } = useTranslation("LoginPage");
   const { t: tCommon } = useTranslation("Common");
   const { t: tError } = useTranslation("Error");
-
   const navigate = useNavigate();
 
   const [form, setForm] = useState<ILogin>(initFormData);

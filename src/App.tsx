@@ -4,12 +4,16 @@ import { Provider as ProviderRedux } from "react-redux";
 import PublicLayout from "./layout/PublicLayout";
 import LoginPage from "./page/LoginPage";
 import { store } from "./store";
+import PrivateLayout from "./layout/PrivateLayout";
+import AuthenGuard from "./components/Guard/AuthenGuard";
+import HomePage from "./page/HomePage";
 
 function App() {
   return (
     <ProviderRedux store={store}>
       <BrowserRouter>
         <Routes>
+          {/* Public routes */}
           <Route>
             <Route
               path="/login"
@@ -20,7 +24,17 @@ function App() {
               }
             />
           </Route>
-          <Route path="/" element={<h1>Home page</h1>} />
+
+          {/* Private routes */}
+          <Route
+            element={
+              <AuthenGuard>
+                <PrivateLayout />
+              </AuthenGuard>
+            }
+          >
+            <Route path="/" element={<HomePage />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </ProviderRedux>

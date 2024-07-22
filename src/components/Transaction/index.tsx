@@ -11,9 +11,8 @@ import {
   Legend,
 } from "chart.js";
 import { Bar } from "react-chartjs-2";
-import { faker } from "@faker-js/faker";
 import SelectTypeDate from "../Select/SelectTypeDate";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 ChartJS.register(
   CategoryScale,
@@ -36,8 +35,8 @@ export const optionsChart = {
 const labels = ["1", "1", "1", "1", "1", "1", "1"];
 
 const Transaction = () => {
-  const t = useTranslations("HomePage");
-  const tTransaction = useTranslations("Transaction");
+  const { t } = useTranslation("HomePage");
+  const { t: tTransaction } = useTranslation("Transaction");
 
   const options: SelectProps["options"] = [
     { value: "project", label: "Dự án" },
@@ -55,12 +54,12 @@ const Transaction = () => {
       datasets: [
         {
           label: tTransaction("quantity"),
-          data: labels.map(() => faker.number.int({ min: 0, max: 3000 })),
+          data: [1, 2, 3, 4, 5, 6],
           backgroundColor: "#1A6DE3",
         },
         {
           label: tTransaction("value"),
-          data: labels.map(() => faker.number.int({ min: 0, max: 3000 })),
+          data: [1, 2, 3, 4, 5, 6],
           backgroundColor: "#19E6B3",
         },
       ],

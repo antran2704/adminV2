@@ -9,7 +9,7 @@ import {
   IUpdateCollection,
 } from "~/interface";
 
-const BASE_URL: string = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
+const BASE_URL: string = import.meta.env.VITE_API_ENDPOINT as string;
 
 const getCollections = async (paramater: ISearchCollection) => {
   const parseParameters = qs.stringify(paramater, {

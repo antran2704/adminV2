@@ -4,7 +4,7 @@ import AxiosClient from "~/config/axiosClient";
 import { INTERNAL_PATH } from "~/config/constants";
 import { ISearchRating } from "~/interface";
 
-const BASE_URL: string = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
+const BASE_URL: string = import.meta.env.VITE_API_ENDPOINT as string;
 
 const getRatings = async (paramater: ISearchRating) => {
   const parseParameters = qs.stringify(paramater, {

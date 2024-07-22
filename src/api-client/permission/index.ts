@@ -10,7 +10,7 @@ import {
   IUpdateUser,
 } from "~/interface";
 
-const BASE_URL: string = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
+const BASE_URL: string = import.meta.env.VITE_API_ENDPOINT as string;
 
 const getListUser = async (paramater: IParamaterListUser) => {
   const parseParameters = qs.stringify(paramater, {

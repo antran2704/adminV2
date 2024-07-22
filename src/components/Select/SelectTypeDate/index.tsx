@@ -1,10 +1,10 @@
 import { useState, useMemo } from "react";
 import { DatePicker, DatePickerProps } from "antd";
 import clsx from "clsx";
-import { useTranslations } from "next-intl";
+import { useTranslation } from "react-i18next";
 
 const SelectTypeDate = () => {
-  const tFilter = useTranslations("Filter");
+  const { t: tFilter } = useTranslation("Filter");
   const dataDate = useMemo(() => {
     return [
       { name: "day", label: tFilter("day") },

@@ -1,6 +1,6 @@
 import AxiosClient from "~/config/axiosClient";
 
-const BASE_URL: string = process.env.NEXT_PUBLIC_API_ENDPOINT_PORTAL as string;
+const BASE_URL: string = import.meta.env.VITE_API_ENDPOINT_PORTAL as string;
 
 const getProvinces = async () => {
   return await AxiosClient.get(BASE_URL + "/address-location/provinces").then(

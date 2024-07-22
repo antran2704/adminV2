@@ -1,9 +1,8 @@
-import { useTranslations } from "next-intl";
-import React from "react";
+import { useTranslation } from "react-i18next";
 
 const TopNFT = () => {
-  const t = useTranslations("HomePage");
-  const tfavoriteNFT = useTranslations("favoriteNFT");
+  const { t } = useTranslation("HomePage");
+  const { t: tfavoriteNFT } = useTranslation("favoriteNFT");
 
   const listNFT = [
     {
