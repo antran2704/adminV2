@@ -1,36 +1,35 @@
 "use client";
-import { useTranslations } from "next-intl";
 import clsx from "clsx";
-import { useParams } from "next/navigation";
-import { Link, usePathname } from "~/navigation";
+import { useTranslation } from "react-i18next";
 
 export default function LocaleSwitcher() {
-  const t = useTranslations("LocaleSwitcher");
-  const pathname = usePathname();
-  const params = useParams();
+  const { i18n } = useTranslation("LocaleSwitcher");
+
+  const onChangeLanguage = (locale: string) => {
+    i18n.changeLanguage(locale);
+    localStorage.setItem("i18nextLng", locale);
+  };
 
   return (
     <div>
-      <Link
+      <button
         className={clsx(
           "md:text-sm sm:text-sm text-xs text-[#202020] hover:underline hover:text-[#0459DD]",
-          params.locale === "en" ? "block" : "hidden",
+          i18n.resolvedLanguage === "en" ? "block" : "hidden",
         )}
-        locale={"vi"}
-        href={`/${pathname}`}
+        onClick={() => onChangeLanguage("vi")}
       >
-        {t("locale", { locale: "en" })}
-      </Link>
-      <Link
+        English
+      </button>
+      <button
         className={clsx(
           "md:text-sm sm:text-sm text-xs text-[#202020] hover:underline hover:text-[#0459DD]",
-          params.locale === "vi" ? "block" : "hidden",
+          i18n.resolvedLanguage === "vi" ? "block" : "hidden",
         )}
-        locale={"en"}
-        href={`/${pathname}`}
+        onClick={() => onChangeLanguage("en")}
       >
-        {t("locale", { locale: "vi" })}
-      </Link>
+        Tiếng Việt
+      </button>
     </div>
   );
 }

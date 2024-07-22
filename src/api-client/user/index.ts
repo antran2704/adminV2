@@ -2,7 +2,7 @@ import AxiosClient from "~/config/axiosClient";
 import { INTERNAL_PATH } from "~/config/constants";
 import { IUpdateInfoAdmin } from "~/interface";
 
-const BASE_URL: string = process.env.NEXT_PUBLIC_API_ENDPOINT as string;
+const BASE_URL: string = import.meta.env.VITE_API_ENDPOINT as string;
 
 const getMe = async () => {
   return await AxiosClient.get(BASE_URL + INTERNAL_PATH + "/user/me").then(

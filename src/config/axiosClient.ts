@@ -37,16 +37,14 @@ const AxiosClient = axios.create({
 
 // list url don't need check accessToken or refreshToken
 const SKIP_URL: string[] = [
-  process.env.NEXT_PUBLIC_API_ENDPOINT + INTERNAL_PATH + "/user/sign-in",
-  process.env.NEXT_PUBLIC_API_ENDPOINT + INTERNAL_PATH + "/user/sign-up",
-  process.env.NEXT_PUBLIC_API_ENDPOINT +
-    INTERNAL_PATH +
-    "/user/forgot-password",
-  process.env.NEXT_PUBLIC_API_ENDPOINT +
+  import.meta.env.VITE_API_ENDPOINT + INTERNAL_PATH + "/user/sign-in",
+  import.meta.env.VITE_API_ENDPOINT + INTERNAL_PATH + "/user/sign-up",
+  import.meta.env.VITE_API_ENDPOINT + INTERNAL_PATH + "/user/forgot-password",
+  import.meta.env.VITE_API_ENDPOINT +
     INTERNAL_PATH +
     "/user/is-in-forgotten-password-progress",
-  process.env.NEXT_PUBLIC_API_ENDPOINT + INTERNAL_PATH + "/user/is-exist",
-  process.env.NEXT_PUBLIC_API_ENDPOINT + INTERNAL_PATH + "/user/reset-password",
+  import.meta.env.VITE_API_ENDPOINT + INTERNAL_PATH + "/user/is-exist",
+  import.meta.env.VITE_API_ENDPOINT + INTERNAL_PATH + "/user/reset-password",
 ];
 
 // list error message need logout when token expried

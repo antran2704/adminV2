@@ -4,10 +4,10 @@ import App from "./App.tsx";
 import "./index.scss";
 
 // import i18n
-import "./i18n";
+import "./i18n.ts";
 
 ReactDOM.createRoot(document.getElementById("root")!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  // <React.StrictMode>
+  <App />,
+  // </React.StrictMode>,
 );
